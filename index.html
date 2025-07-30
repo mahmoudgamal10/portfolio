@@ -71,50 +71,16 @@
         transform: translateY(0);
       }
     }
-    /* Pixel Art Swords */
-    .pixel-swords {
-      font-family: monospace;
-      white-space: pre;
-      font-size: 20px;
-      line-height: 18px;
-      color: red;
-      user-select: none;
-      text-shadow:
-        0 0 5px #f00,
-        0 0 10px #f00;
-      animation: swing 3s ease-in-out infinite;
+    .gif-logo {
+      width: 100px;
       margin-bottom: 20px;
-    }
-    @keyframes swing {
-      0%, 100% {
-        transform: rotate(-7deg);
-      }
-      50% {
-        transform: rotate(7deg);
-      }
+      animation: fadeIn 1.5s ease-in-out;
     }
   </style>
 </head>
 <body>
   <div class="glow-border">
-    <pre class="pixel-swords">
-       /|          |\
-      / |          | \
-     /  |          |  \
-     \  |          |  /
-      \ |          | /
-       \|          |/
-        |          |
-        |          |
-        |          |
-        |          |
-        |          |
-        |          |
-        |          |
-       / \        / \
-      /   \      /   \
-     /_____\    /_____\
-    </pre>
+    <img src="portfolio/gifs/sword.gif" alt="Swords Logo" class="gif-logo" />
 
     <h1>Mahmoud Gamal</h1>
     <p>Red Teaming | Cybersecurity | Penetration Testing</p>
