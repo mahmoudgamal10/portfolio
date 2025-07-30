@@ -1,129 +1,92 @@
-:root {
-  --primary-green: #00ff41;
-  --secondary-green: #00cc33;
-  --dark-bg: #0a0a0a;
-  --darker-bg: #050505;
-  --text-light: #ffffff;
-  --text-dim: #888888;
-  --border-color: #333333;
-}
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Orbitron", monospace;
-  background: var(--dark-bg);
-  color: var(--text-light);
+  background-color: #0d0d0d;
+  color: #fff;
+  font-family: 'Share Tech Mono', monospace;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
 }
 
-.gif-container {
-  margin-top: 30px;
+.container {
+  max-width: 1200px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.gif-container img {
-  width: 300px;
-  height: auto;
-  margin-bottom: 30px;
+.text-section {
+  animation: fadeInLeft 1.5s ease forwards;
+  opacity: 0;
 }
 
-header {
-  max-width: 700px;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.main-title {
+.animated-text {
   font-size: 4rem;
   font-weight: 700;
-  font-family: "VT323", monospace;
-  color: var(--text-light);
-  margin-bottom: 0.3em;
+  color: #00ff9f;
+  margin: 0;
 }
 
-.subtitle {
-  font-family: "VT323", monospace;
-  font-size: 1.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1em;
-  letter-spacing: 2px;
+.sub-heading {
+  font-size: 1.25rem;
+  margin: 10px 0;
 }
 
-.intro {
-  font-family: "VT323", monospace;
-  font-size: 1.2rem;
-  color: var(--text-dim);
-  line-height: 1.5;
+.description {
+  font-size: 1rem;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
-.writeups-links {
-  margin-top: 3em;
+.left-section {
+  align-self: flex-start;
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  max-width: 700px;
-}
-
-.writeup-link {
-  background-color: var(--primary-green);
-  color: var(--dark-bg);
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-family: "VT323", monospace;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-decoration: none;
-  box-shadow: 0 0 15px var(--primary-green);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.writeup-link:hover {
-  background-color: var(--secondary-green);
-  box-shadow: 0 0 25px var(--secondary-green);
-}
-
-.fade-in-left {
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeInLeft 1.5s ease 0.5s forwards;
   opacity: 0;
-  transform: translateX(-30px);
-  animation: fadeInLeft 1s ease forwards;
 }
 
-.fade-in-left.delay-1 {
-  animation-delay: 0.2s;
+.writeups {
+  font-size: 2rem;
+  color: #00ff9f;
+  font-weight: 700;
+  margin: 0;
 }
 
-.fade-in-left.delay-2 {
-  animation-delay: 0.5s;
+.green-box {
+  background-color: #00ff9f;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
-.fade-in-left.delay-3 {
-  animation-delay: 0.8s;
+.image-section {
+  animation: fadeInLeft 1.5s ease 1s forwards;
+  opacity: 0;
+}
+
+.main-gif {
+  width: 500px;
+  border-radius: 10px;
 }
 
 @keyframes fadeInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
   to {
-    opacity: 1;
     transform: translateX(0);
-  }
-}
-
-@media (max-width: 600px) {
-  .main-title {
-    font-size: 3rem;
-  }
-  .subtitle {
-    font-size: 1.2rem;
-  }
-  .intro {
-    font-size: 1rem;
-  }
-  .gif-container img {
-    width: 200px;
+    opacity: 1;
   }
 }
 
