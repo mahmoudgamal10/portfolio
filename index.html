@@ -1,108 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>0x01 | Cybersecurity Expert</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      background-color: #0d0d0d;
-      color: #33ff33;
-      font-family: 'Courier New', Courier, monospace;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.7);
-      border: 1px solid #333;
-      border-radius: 10px;
-    }
-
-    h1 {
-      font-size: 36px;
-      color: #00ff00;
-      border-bottom: 1px solid #333;
-      padding-bottom: 10px;
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .section {
-      margin-top: 40px;
-    }
-
-    .terminal {
-      background-color: #111;
-      padding: 20px;
-      border-radius: 5px;
-      font-size: 16px;
-      color: #00ff00;
-      box-shadow: 0 0 10px #00ff00;
-    }
-
-    a {
-      color: #33ccff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .cursor {
-      display: inline-block;
-      width: 10px;
-      background-color: #33ff33;
-      animation: blink 0.8s infinite;
-    }
-
-    @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>0x01 | Mahmoud Gamal</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+  <canvas id="matrixCanvas"></canvas>
+
   <div class="container">
-    <h1>>_ Mahmoud Gamal <span class="cursor"></span></h1>
+    <h1 class="glitch" data-text="> Mahmoud Gamal">> Mahmoud Gamal</h1>
+    <div class="typewriter">
+      <p>Cybersecurity Expert | Pentester | Bug Hunter</p>
+    </div>
 
-    <div class="section">
+    <section class="section fade-in">
       <h2>💻 About Me</h2>
-      <p>Cybersecurity Enthusiast | Penetration Tester | Bug Hunter<br>
-         Specializing in Web App Security, Reverse Engineering, and Ethical Hacking.
-      </p>
-    </div>
+      <p>I break things to protect them.<br> I specialize in web exploitation, malware analysis, and red teaming.</p>
+    </section>
 
-    <div class="section">
+    <section class="section fade-in">
       <h2>⚔️ Skills</h2>
-      <div class="terminal">
-        - Web Exploitation<br>
-        - Burp Suite / OWASP ZAP<br>
-        - XSS, SQLi, SSRF, LFI/RFI<br>
-        - Reverse Engineering<br>
-        - Linux / Bash / Python / JavaScript<br>
-        - Network Sniffing & Wi-Fi Attacks<br>
-        - CTF & Red Teaming
+      <div class="terminal-box">
+        <ul>
+          <li>🟢 XSS, SQLi, SSRF, LFI</li>
+          <li>🟢 Burp Suite, OWASP ZAP</li>
+          <li>🟢 Python, Bash, JavaScript</li>
+          <li>🟢 Reverse Engineering</li>
+          <li>🟢 CTFs, Red Teaming</li>
+        </ul>
       </div>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="section fade-in">
       <h2>🔗 Links</h2>
       <p>
-        GitHub: <a href="https://github.com/mahmoudgamal10" target="_blank">mahmoudgamal10</a><br>
-        TryHackMe: <a href="#" target="_blank">your-profile</a><br>
-        Hack The Box: <a href="#" target="_blank">your-profile</a><br>
-        Email: <a href="mailto:you@example.com">you@example.com</a>
+        <a href="https://github.com/mahmoudgamal10" target="_blank">GitHub</a> |
+        <a href="#" target="_blank">TryHackMe</a> |
+        <a href="#" target="_blank">HackTheBox</a> |
+        <a href="mailto:you@example.com">Email</a>
       </p>
-    </div>
+    </section>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
 

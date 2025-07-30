@@ -1,8 +1,102 @@
-body {
-  background-color: #121212;
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
-  padding-top: 100px;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Share Tech Mono', monospace;
+  color: #00ff99;
+  background-color: black;
+  overflow: hidden;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+h1.glitch {
+  font-size: 36px;
+  position: relative;
+  color: #00ff99;
+}
+
+h1.glitch::before,
+h1.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: #00ff99;
+  background: black;
+  overflow: hidden;
+}
+
+h1.glitch::before {
+  animation: glitchTop 1s infinite linear;
+  top: -2px;
+}
+
+h1.glitch::after {
+  animation: glitchBottom 1s infinite linear;
+  top: 2px;
+}
+
+@keyframes glitchTop {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  50% { clip: rect(0, 9999px, 20px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+@keyframes glitchBottom {
+  0% { clip: rect(0, 9999px, 0, 0); }
+  50% { clip: rect(20px, 9999px, 40px, 0); }
+  100% { clip: rect(0, 9999px, 0, 0); }
+}
+
+.typewriter p {
+  overflow: hidden;
+  border-right: .15em solid #00ff99;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+  width: 100%;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00ff99 }
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.terminal-box {
+  background-color: #111;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #00ff99;
+}
+
+a {
+  color: #33ccff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
