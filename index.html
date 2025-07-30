@@ -2,90 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mahmoud Gamal | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      color: #f00;
-      font-family: 'Share Tech Mono', monospace;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .glow-border {
-      border: 2px solid red;
-      padding: 20px 40px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px red;
-      animation: pulse 3s infinite;
-      text-align: center;
-      max-width: 600px;
-    }
-    @keyframes pulse {
-      0%, 100% {
-        box-shadow: 0 0 10px red;
-      }
-      50% {
-        box-shadow: 0 0 20px red;
-      }
-    }
-    h1 {
-      font-size: 3em;
-      margin: 10px 0 20px;
-      text-shadow: 0 0 10px red;
-      animation: fadeIn 2s ease-in-out;
-    }
-    p {
-      font-size: 1.2em;
-      opacity: 0.8;
-      margin: 8px 0;
-      animation: fadeInUp 2s ease-in-out 1s forwards;
-    }
-    a {
-      color: #f00;
-      text-decoration: none;
-      border-bottom: 1px dotted red;
-      transition: all 0.3s ease-in-out;
-    }
-    a:hover {
-      color: #fff;
-      border-bottom: 1px solid #fff;
-    }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    .gif-logo {
-      width: 100px;
-      margin-bottom: 20px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="glow-border">
-    <img src="portfolio/gifs/sword.gif" alt="Swords Logo" class="gif-logo" />
+  <div class="gif-container">
+    <img src="gifs/sword.gif" alt="Swords Logo" class="logo-gif" />
+  </div>
 
+  <div class="box">
     <h1>Mahmoud Gamal</h1>
-    <p>Red Teaming | Cybersecurity | Penetration Testing</p>
-    <p><a href="mailto:mahmoud@example.com">mahmoud@example.com</a></p>
-    <p><a href="https://github.com/mahmoudgamal10" target="_blank" rel="noopener noreferrer">GitHub Profile</a></p>
+    <p>Red Teamer | Penetration Tester | Cybersecurity Specialist</p>
+    <p>Welcome to my world of digital warfare.</p>
   </div>
 </body>
 </html>
