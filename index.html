@@ -3,49 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>0x01 | Mahmoud Gamal</title>
-  <link href="style.css" rel="stylesheet" />
+  <title>Mahmoud Gamal | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #f00;
+      font-family: 'Share Tech Mono', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 0 0 10px red;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 1.2em;
+      opacity: 0.8;
+      text-align: center;
+      animation: fadeInUp 2s ease-in-out 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .glow-border {
+      border: 2px solid red;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px red;
+      animation: pulse 3s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 10px red;
+      }
+      50% {
+        box-shadow: 0 0 20px red;
+      }
+    }
+
+    a {
+      color: #f00;
+      text-decoration: none;
+      border-bottom: 1px dotted red;
+      transition: all 0.3s ease-in-out;
+    }
+
+    a:hover {
+      color: #fff;
+      border-bottom: 1px solid #fff;
+    }
+  </style>
 </head>
 <body>
-  <canvas id="matrixCanvas"></canvas>
-
-  <div class="container">
-    <h1 class="glitch" data-text="> Mahmoud Gamal">> Mahmoud Gamal</h1>
-    <div class="typewriter">
-      <p>Cybersecurity Expert | Pentester | Bug Hunter</p>
-    </div>
-
-    <section class="section fade-in">
-      <h2>💻 About Me</h2>
-      <p>I break things to protect them.<br> I specialize in web exploitation, malware analysis, and red teaming.</p>
-    </section>
-
-    <section class="section fade-in">
-      <h2>⚔️ Skills</h2>
-      <div class="terminal-box">
-        <ul>
-          <li>🟢 XSS, SQLi, SSRF, LFI</li>
-          <li>🟢 Burp Suite, OWASP ZAP</li>
-          <li>🟢 Python, Bash, JavaScript</li>
-          <li>🟢 Reverse Engineering</li>
-          <li>🟢 CTFs, Red Teaming</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section fade-in">
-      <h2>🔗 Links</h2>
-      <p>
-        <a href="https://github.com/mahmoudgamal10" target="_blank">GitHub</a> |
-        <a href="#" target="_blank">TryHackMe</a> |
-        <a href="#" target="_blank">HackTheBox</a> |
-        <a href="mailto:you@example.com">Email</a>
-      </p>
-    </section>
+  <div class="glow-border">
+    <h1>Mahmoud Gamal</h1>
+    <p>Red Teaming | Cybersecurity | Penetration Testing</p>
+    <p><a href="mailto:mahmoud@example.com">mahmoud@example.com</a></p>
+    <p><a href="https://github.com/mahmoudgamal10" target="_blank">GitHub Profile</a></p>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
 
