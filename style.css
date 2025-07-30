@@ -25,21 +25,11 @@ body {
   align-items: center;
 }
 
-/* GIF */
+/* Sword GIF - no effect */
 .gif-container img {
   width: 150px;
   height: auto;
   margin-bottom: 30px;
-  animation: pulseGlow 3s ease-in-out infinite;
-}
-
-@keyframes pulseGlow {
-  0%, 100% {
-    filter: drop-shadow(0 0 8px var(--primary-green));
-  }
-  50% {
-    filter: drop-shadow(0 0 20px var(--secondary-green));
-  }
 }
 
 /* Header */
@@ -50,25 +40,22 @@ body {
   animation: fadeInDown 1.5s ease forwards;
 }
 
-/* Full Name */
+/* Mahmoud Gamal style */
 .main-title {
   font-family: 'VT323', monospace;
-  font-size: 5rem;
+  font-size: 4rem;
+  font-weight: 700;
   color: var(--primary-green);
-  text-shadow:
-    0 0 10px var(--primary-green),
-    0 0 20px var(--secondary-green),
-    0 0 30px var(--primary-green);
-  margin-bottom: 0.2em;
+  margin-bottom: 0.3em;
 }
 
-/* Subtitle */
+/* Penetration Tester | Reverse Engineer style (like writeups title) */
 .subtitle {
   font-family: 'VT323', monospace;
-  font-size: 1.8rem;
-  color: var(--accent-cyan);
-  text-shadow: 0 0 10px var(--accent-cyan);
-  margin-bottom: 1em;
+  font-size: 1.4rem;
+  color: var(--primary-green);
+  text-shadow: 0 0 8px var(--primary-green);
+  margin-bottom: 1.2em;
 }
 
 /* Intro paragraph */
@@ -104,27 +91,33 @@ body {
   text-align: center;
 }
 
+/* Writeup list */
 .writeup-list {
   list-style: none;
+  padding-left: 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  padding-left: 0;
 }
 
-.writeup-list li a {
+/* DLL Hijacking link in green box */
+.writeup-link {
+  display: inline-block;
+  background-color: var(--primary-green);
+  color: var(--dark-bg);
   font-family: 'VT323', monospace;
   font-size: 1.4rem;
-  color: var(--primary-green);
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px var(--primary-green);
 }
 
-.writeup-list li a:hover {
-  color: var(--accent-cyan);
-  border-color: var(--accent-cyan);
-  text-shadow: 0 0 8px var(--accent-cyan);
+.writeup-link:hover {
+  background-color: var(--secondary-green);
+  box-shadow: 0 0 20px var(--secondary-green);
+  color: var(--text-light);
 }
 
 /* Animations */
@@ -137,5 +130,25 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Typing effect styling */
+.typing {
+  overflow: hidden;
+  border-right: .15em solid var(--primary-green);
+  white-space: nowrap;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+  100% { border-color: var(--primary-green); }
 }
 
