@@ -1,128 +1,27 @@
-:root {
-  --primary-green: #00ff41;
-  --secondary-green: #00cc33;
-  --dark-bg: #0a0a0a;
-  --darker-bg: #050505;
-  --text-light: #ffffff;
-  --text-dim: #888888;
-  --border-color: #333333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mahmoud Gamal | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Orbitron&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="gif-container">
+    <img src="gifs/sword.gif" alt="Swords Logo" />
+  </div>
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Orbitron", monospace;
-  background: var(--dark-bg);
-  color: var(--text-light);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 100vh;
-}
+  <header>
+    <h1 class="main-title fade-in-left delay-1">Mahmoud Gamal</h1>
+    <h2 class="subtitle fade-in-left delay-2">Penetration Tester | Reverse Engineer</h2>
+    <p class="intro fade-in-left delay-3">
+      I'm a penetration tester with reverse engineering experience. I enjoy sharing skills and fun in pentesting. My writeups detail my journey through vulnerabilities, PoCs, and CTF challenges.
+    </p>
+  </header>
 
-.gif-container {
-  margin-top: 30px;
-}
-
-.gif-container img {
-  width: 300px;
-  height: auto;
-  margin-bottom: 30px;
-}
-
-header {
-  max-width: 700px;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.main-title {
-  font-size: 4rem;
-  font-weight: 700;
-  font-family: "VT323", monospace;
-  color: var(--text-light);
-  margin-bottom: 0.3em;
-}
-
-.subtitle {
-  font-family: "VT323", monospace;
-  font-size: 1.5rem;
-  color: var(--primary-green);
-  margin-bottom: 1em;
-  letter-spacing: 2px;
-}
-
-.intro {
-  font-family: "VT323", monospace;
-  font-size: 1.2rem;
-  color: var(--text-dim);
-  line-height: 1.5;
-}
-
-.writeups-links {
-  margin-top: 3em;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  max-width: 700px;
-}
-
-.writeup-link {
-  background-color: var(--primary-green);
-  color: var(--dark-bg);
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-family: "VT323", monospace;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-decoration: none;
-  box-shadow: 0 0 15px var(--primary-green);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.writeup-link:hover {
-  background-color: var(--secondary-green);
-  box-shadow: 0 0 25px var(--secondary-green);
-}
-
-.fade-in-left {
-  opacity: 0;
-  transform: translateX(-30px);
-  animation: fadeInLeft 1s ease forwards;
-}
-
-.fade-in-left.delay-1 {
-  animation-delay: 0.2s;
-}
-
-.fade-in-left.delay-2 {
-  animation-delay: 0.5s;
-}
-
-.fade-in-left.delay-3 {
-  animation-delay: 0.8s;
-}
-
-@keyframes fadeInLeft {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@media (max-width: 600px) {
-  .main-title {
-    font-size: 3rem;
-  }
-  .subtitle {
-    font-size: 1.2rem;
-  }
-  .intro {
-    font-size: 1rem;
-  }
-  .gif-container img {
-    width: 200px;
-  }
-}
+  <div class="writeups-links fade-in-left delay-3">
+    <a href="writeups/dll-hijacking.html" class="writeup-link">DLL Hijacking</a>
+  </div>
+</body>
+</html>
